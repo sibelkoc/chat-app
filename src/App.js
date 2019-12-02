@@ -2,17 +2,42 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Contact from './components/Contact';
+import ContactList from './components/ContactList'
 
 function App() {
-
+  const Contact = [
+      {
+          name: 'Molly',
+          avatar: 'https://randomuser.me/api/portraits/women/72.jpg',
+          status: false,
+      },
+      {
+          name: 'Lea',
+          avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+          status: false,
+      },
+      {
+          name: 'James',
+          avatar: 'https://randomuser.me/api/portraits/men/2.jpg',
+          status: true,
+      },
+      {
+          name: 'Cameron',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
+          status: true,
+      },
+      {
+          name: 'Xian',
+          avatar: 'https://randomuser.me/api/portraits/women/17.jpg',
+          status: true,
+      }
+  ];
 
   return (
-    <div>
-      <Contact name='hulk' avatar='https://media.melty.fr/article-4009154-head-f5/hulk.jpg' status={true}/>
-      <Contact name='spiderman' avatar='https://static.hitek.fr/img/actualite/ill_m/1439502984/illustrnouveauspiderman.jpg' status={false}/>
-      <Contact name='batman' avatar='https://www.sideshow.com/storage/product-images/903353/batman_dc-comics_feature.jpg' status={true}/>
-    </div>
-  );
-}
+      <div className="App">
+        <ContactList Contact={Contact}/>
+      </div>
+    );
+  }
 
-export default App;
+  export default App;
